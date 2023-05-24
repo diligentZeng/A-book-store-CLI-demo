@@ -7,24 +7,25 @@ public class Customer {
 	private long id;
 	private String name;
 	private String firstName;
+	private String address;
 	private String zipCode;
 	private String city;
 	private boolean feesPayed;
 	private ArrayList<BookCopy> bookCopies;
 	
 	//Constructor
-	public Customer(long id, String name, String firstName, String zipCode, String city) {
+	public Customer(long id, String name, String firstName,String address, String zipCode, String city, boolean feesPayed ) {
 		this.id = id;
 		this.name = name;
 		this.firstName = firstName;
-		this.zipCode = zipCode;
-		this.city = city;
-		// fees are initially paided
-		this.feesPayed = true;
+		this.setZipCode(zipCode);
+		this.address = address;
+		this.setCity(city);
+		this.feesPayed = feesPayed;
 		this.bookCopies = new ArrayList<>();	
 	}
 	
-	public String getNameById(){
+	public String getName(){
 		return name + firstName;
 	}
 	
@@ -51,6 +52,26 @@ public class Customer {
 	//get book copies
 	public ArrayList<BookCopy> getBookCopy(){
 		return this.bookCopies;
+	}
+
+	public long getId() {
+		return this.id;
+	}
+
+	public String getZipCode() {
+		return zipCode;
+	}
+
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
 	}
 
 }
