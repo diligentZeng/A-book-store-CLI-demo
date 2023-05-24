@@ -11,20 +11,20 @@ import java.util.Date;
  */
 public class BookCopy {
 	private long id;
-	private Book book;
+	private String bookIsbn;
 	private String shelfLocation;
-	private Date addedToLibrary;
+	private String addedToLibrary;
 	private boolean lent;
-	private Date lentDate;
+	private String lentDate;
 	
 	//constructor
-	public BookCopy(long id, Book book, String shelfLocation, Date addedToLibrary) {
+	public BookCopy(long id, String bookIsbn, String shelfLocation, String addedToLibrary,boolean lent, String lentDate) {
 		this.id = id;
-		this.book = book;
+		this.bookIsbn = bookIsbn;
 		this.setShelfLocation(shelfLocation); 
 		this.addedToLibrary = addedToLibrary;
-		this.setLent(false);
-		this.setLentDate(null);
+		this.setLent(lent);
+		this.setLentDate(lentDate);
 	}
 
 	public String getShelfLocation() {
@@ -39,11 +39,11 @@ public class BookCopy {
 		return id;
 	}
 
-	public Book getBook() {
-		return book;
+	public String getBook() {
+		return bookIsbn;
 	}
 
-	public Date getAddedToLibrary() {
+	public String getAddedToLibrary() {
 		return addedToLibrary;
 	}
 
@@ -55,11 +55,11 @@ public class BookCopy {
 		this.lent = lent;
 	}
 
-	public Date getLentDate() {
+	public String getLentDate() {
 		return lentDate;
 	}
 
-	public void setLentDate(Date lentDate) {
+	public void setLentDate(String lentDate) {
 		this.lentDate = lentDate;
 	}
 	

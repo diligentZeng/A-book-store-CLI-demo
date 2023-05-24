@@ -1,20 +1,19 @@
 package main;
 
-import java.util.ArrayList;
 
 public class Book {
 	
 	//attributes of the book
 	private String isbn;
 	private String title;
-	private ArrayList<String> authors;
+	private String[] authors;
 	private int year;
 	private String city;
 	private String publisher;
 	private int edition;
 	
 	//constructor
-	public Book(String isbn, String title, ArrayList<String> authors,int year, String city, String publisher, int edition) {
+	public Book(String isbn, String title, String[] authors,int year, String city, String publisher, int edition) {
 		this.isbn = isbn;
 		this.title = title;
 		this.authors = authors;
@@ -34,7 +33,7 @@ public class Book {
 		return title;
 	}
 
-	public ArrayList<String> getAuthors() {
+	public String[] getAuthors() {
 		return authors;
 	}
 
